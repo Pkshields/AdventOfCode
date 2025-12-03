@@ -46,7 +46,7 @@ fun calculateSecretDoorPasswordWithMethod0x434C49434B(instructions: List<String>
     return password
 }
 
-fun splitRotationInstructions(instructions: List<String>) =
+private fun splitRotationInstructions(instructions: List<String>) =
     instructions.map { Pair(it.first(), it.substring(1).toInt()) }
 
 fun main() {

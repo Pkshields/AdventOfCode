@@ -17,4 +17,5 @@ tasks.test {
 dependencies {
     testImplementation(kotlin("test"))
     testImplementation("com.willowtreeapps.assertk:assertk:0.28.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.14.0")
 }
