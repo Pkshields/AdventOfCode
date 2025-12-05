@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="2025 Day 3: Lobby" type="JetRunConfigurationType">
+    <option name="MAIN_CLASS_NAME" value="dev.paulshields.aoc.year2025.Day3Kt" />
+    <module name="AdventOfCode.main" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

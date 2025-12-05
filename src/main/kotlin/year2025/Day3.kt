@@ -2,9 +2,8 @@ package dev.paulshields.aoc.year2025
 
 import dev.paulshields.aoc.utils.readFileAsStringList
 
-fun calculateTotalMaxJoltageFromAllBanks(banks: List<String>): Int {
-    return banks.map(::calculateMaxJoltageFromBank).sumOf { it }
-}
+fun calculateTotalMaxJoltageFromAllBanks(banks: List<String>): Int =
+    banks.map(::calculateMaxJoltageFromBank).sumOf { it }
 
 private fun calculateMaxJoltageFromBank(bank: String): Int {
     val bankDigits = bank.map { it.digitToInt() }
@@ -21,9 +20,8 @@ private fun calculateMaxJoltageFromBank(bank: String): Int {
     return (batteryOne * 10) + batteryTwo
 }
 
-fun calculateTotalMaxOverrideJoltageFromAllBanks(banks: List<String>): Long {
-    return banks.map(::calculateMaxOverrideJoltageFromBank).sumOf { it }
-}
+fun calculateTotalMaxOverrideJoltageFromAllBanks(banks: List<String>): Long =
+    banks.map(::calculateMaxOverrideJoltageFromBank).sumOf { it }
 
 private fun calculateMaxOverrideJoltageFromBank(bank: String): Long {
     val bankDigits = bank.map { it.digitToInt() }

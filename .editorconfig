@@ -12,3 +12,6 @@ ij_continuation_indent_size = 8
 
 [*.yml]
 indent_size = 2
+
+[*.{kt, kts}]
+ktlint_standard_multiline-expression-wrapping = disabled # This would enforces that a multiline expression must start on a new line
