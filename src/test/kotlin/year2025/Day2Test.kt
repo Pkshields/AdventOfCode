@@ -33,10 +33,7 @@ class Day2Test {
         "824824821-824824827,0",
         "2121212118-2121212124,0",
     )
-    fun `should find the invalid product ids for each range`(
-        inputRange: String,
-        expectedResult: Long,
-    ) {
+    fun `should find the invalid product ids for each range`(inputRange: String, expectedResult: Long) {
         val result = findSumOfProductIdsContainingPatternRepeatedTwice(inputRange)
 
         assertThat(result).isEqualTo(expectedResult)

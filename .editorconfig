@@ -14,4 +14,7 @@ ij_continuation_indent_size = 8
 indent_size = 2
 
 [*.{kt, kts}]
-ktlint_standard_multiline-expression-wrapping = disabled # This would enforces that a multiline expression must start on a new line
+ktlint_standard_multiline-expression-wrapping = disabled # Disabling this means a multiline expression does not need to start on a new line
+ktlint_standard_chain-method-continuation = disabled # If enabled, this would enforce alignment of multiline method chains in a way that makes the code look worse
+ktlint_class_signature_rule_force_multiline_when_parameter_count_greater_or_equal_than = unset # Lets me have single line data classes, as long as the line length is respected
+ktlint_function_signature_rule_force_multiline_when_parameter_count_greater_or_equal_than = unset # Same as above for functions
