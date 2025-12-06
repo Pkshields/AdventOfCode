@@ -10,9 +10,12 @@ class FileUtilsTest {
     private val readFileAsStringTestFileLocation = "/ReadFileAsStringTestFile.txt"
     private val readFileAsStringWithWhitespaceTestFileLocation = "/ReadFileAsStringTestFileWithWhitespace.txt"
     private val readFileAsStringListTestFileLocation = "/ReadFileAsStringListTestFile.txt"
+    private val readFileAsStringListWithWhitespaceTestFileLocation = "/ReadFileAsStringListTestFileWithWhitespace.txt"
     private val brokenFileLocation = "/FileThatDoesNotExist.txt"
     private val contentsOfReadFileAsStringTestFile = "December is far too busy!"
     private val contentsOfReadFileAsStringListTestFile = listOf("December", "is", "far", "too", "busy!")
+    private val contentsOfReadFileAsStringListWithWhitespaceTestFile =
+        listOf("December", "is", "", "far", "", "too", "", "busy!")
 
     @Nested
     inner class ReadFileAsStringTests {
@@ -45,6 +48,13 @@ class FileUtilsTest {
             val contents = readFileAsStringList(readFileAsStringListTestFileLocation)
 
             assertThat(contents).isEqualTo(contentsOfReadFileAsStringListTestFile)
+        }
+
+        @Test
+        fun `should correctly handle whitespace within a string list`() {
+            val contents = readFileAsStringList(readFileAsStringListWithWhitespaceTestFileLocation)
+
+            assertThat(contents).isEqualTo(contentsOfReadFileAsStringListWithWhitespaceTestFile)
         }
 
         @Test

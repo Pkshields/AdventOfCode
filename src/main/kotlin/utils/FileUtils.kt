@@ -10,7 +10,12 @@ fun readFileAsString(filePath: String) =
         ?.trim()
         ?: ""
 
-fun readFileAsStringList(filePath: String) =
-    readFileAsString(filePath)
-        .lines()
-        .filter { it.isNotEmpty() }
+fun readFileAsStringList(filePath: String): List<String> {
+    val stringList = readFileAsString(filePath).lines()
+    val indexOfLastNonEmptyString = stringList.indexOfLast { it.isNotEmpty() }
+    return if (indexOfLastNonEmptyString == -1) {
+        emptyList()
+    } else {
+        stringList.take(indexOfLastNonEmptyString + 1)
+    }
+}
