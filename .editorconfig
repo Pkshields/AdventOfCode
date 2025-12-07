@@ -14,7 +14,18 @@ ij_continuation_indent_size = 8
 indent_size = 2
 
 [*.{kt, kts}]
-ktlint_standard_multiline-expression-wrapping = disabled # Disabling this means a multiline expression does not need to start on a new line
-ktlint_standard_chain-method-continuation = disabled # If enabled, this would enforce alignment of multiline method chains in a way that makes the code look worse
-ktlint_class_signature_rule_force_multiline_when_parameter_count_greater_or_equal_than = unset # Lets me have single line data classes, as long as the line length is respected
-ktlint_standard_function-signature = disabled # Lets me take control over when function signature or expressions wrap to a new line. Line length still enforced.
+# Disabling this means a multiline expression does not need to start on a new line
+ktlint_standard_multiline-expression-wrapping = disabled
+
+# If enabled, this would enforce alignment of multiline method chains in a way that makes the code look worse
+ktlint_standard_chain-method-continuation = disabled
+
+# Lets me have single line data classes, as long as the line length is respected
+ktlint_class_signature_rule_force_multiline_when_parameter_count_greater_or_equal_than = unset
+
+# Lets me take control over when function signature or expressions wrap to a new line. Line length still enforced.
+ktlint_standard_function-signature = disabled
+
+# ktlint does not support continuation indent configuration, so this rule conflicts with basic intellij configuration
+ktlint_standard_indent = disabled
+ktlint_standard_string-template-indent = disabled
