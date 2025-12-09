@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Day 6: Trash Compactor" type="JetRunConfigurationType">
-    <option name="MAIN_CLASS_NAME" value="dev.paulshields.aoc.year2025.Day6Kt" />
+  <configuration default="false" name="2025 Day 7: Laboratories" type="JetRunConfigurationType">
+    <option name="MAIN_CLASS_NAME" value="dev.paulshields.aoc.year2025.Day7Kt" />
     <module name="AdventOfCode.main" />
     <shortenClasspath name="NONE" />
     <method v="2">
