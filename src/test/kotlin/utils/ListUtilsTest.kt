@@ -28,7 +28,6 @@ class ListUtilsTest {
 
             assertThat(target.first()).isNotEqualTo(1)
             assertThat(target).hasSize(4)
-
         }
     }
 
