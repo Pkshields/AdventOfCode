@@ -1,5 +1,7 @@
 package dev.paulshields.aoc.year2025
 
+import dev.paulshields.aoc.utils.pop
+import dev.paulshields.aoc.utils.pushToFront
 import dev.paulshields.aoc.utils.readFileAsStringList
 
 fun countTachyonBeamSplits(manifold: List<String>): Int {
@@ -69,10 +71,6 @@ private class TachyonPathHistory {
         }
     }
 }
-
-private fun <T> MutableList<T>.pop() = this.elementAt(0).also { this.remove(it) }
-
-private fun <T> MutableList<T>.pushToFront(element: T) = this.add(0, element)
 
 fun main() {
     println("--- Day 7: Laboratories ---")

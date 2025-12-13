@@ -1,5 +1,6 @@
 package dev.paulshields.aoc.year2025
 
+import dev.paulshields.aoc.utils.pop
 import dev.paulshields.aoc.utils.readFileAsStringList
 import kotlin.math.max
 import kotlin.math.min
@@ -58,11 +59,6 @@ private fun mergeOverlappingIdRanges(initialIngredientRanges: List<LongRange>): 
 
     return resultingRanges.toList()
 }
-
-private fun <T> MutableList<T>.pop() =
-    this.first().also {
-        this.removeAt(0)
-    }
 
 private fun LongRange.overlaps(other: LongRange) =
     this.contains(other.first) ||
